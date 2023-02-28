@@ -7,11 +7,11 @@ This module will simulate a bunch of keyboard shortcuts and system commands to a
 ## Basic actuators
 
 ##### Done
+ - volume control
+ - copy/past 
+ - arrow control
 
 
 
 ##### In Progress
- - volume control
- - arrow control
- - copy/past 
  - regional click
