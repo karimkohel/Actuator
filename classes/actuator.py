@@ -47,3 +47,27 @@ class Actuator():
             defaults to 1
         """
         pyautogui.press(arrowKey, presses=presses)
+
+    @staticmethod
+    def scrollUp(scrollAmount: int = 25) -> None:
+        """Simulate a mouse scroll up event
+
+        Parameters
+        ----------
+        scrollAmount: int, optional
+            the amount of scrolling out of 100, defaults to 25  
+
+        """
+        pyautogui.scroll(scrollAmount)
+    
+    @staticmethod
+    def scrollDown(scrollAmount: int = 25) -> None:
+        """Simulate a mouse scroll down event
+
+        Parameters
+        ----------
+        scrollAmount: int, optional
+            the amount of scrolling out of 100, defaults to 25  
+
+        """
+        pyautogui.scroll(-scrollAmount)
