@@ -14,4 +14,5 @@ This module will simulate a bunch of keyboard shortcuts and system commands to a
 
 
 ##### In Progress
+ - regional focus
  - regional click
