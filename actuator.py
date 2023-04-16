@@ -1,6 +1,7 @@
 import pyautogui
 import math
 from sys import platform
+import osascript
 #from pyvolume import pyvolume
 
 
@@ -141,7 +142,12 @@ class Actuator():
         pyautogui.scroll(-scrollAmount)
 
     @staticmethod
-    def volumeUp():
+    def volumeUp(increment: int = 20) -> None:
         if platform == "linux" or platform == "linux2":
-        # linux
+            pass
         elif platform == "darwin":
+            result = osascript.osascript('get volume settings')
+            volInfo = result[1].split(',')
+            outputVol = volInfo[0].replace('output volume:', '')
+            target_volume = int(outputVol) + increment
+            osascript.osascript("set volume output volume {}".format(target_volume))
