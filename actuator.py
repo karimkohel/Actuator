@@ -1,5 +1,6 @@
 import pyautogui
 import math
+from sys import platform
 #from pyvolume import pyvolume
 
 
@@ -138,3 +139,9 @@ class Actuator():
 
         """
         pyautogui.scroll(-scrollAmount)
+
+    @staticmethod
+    def volumeUp():
+        if platform == "linux" or platform == "linux2":
+        # linux
+        elif platform == "darwin":
