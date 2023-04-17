@@ -3,6 +3,9 @@ import math
 from sys import platform
 import osascript
 #from pyvolume import pyvolume
+from subprocess import call
+
+
 
 
 class Actuator():
@@ -100,6 +103,7 @@ class Actuator():
             The actual volume level to set in the system
         """
         pyvolume(level=volumeLevel)
+        # call(["amixer", "-D", "pulse", "sset", "Master", f"{volumeLevel}%"])
 
     @staticmethod
     def arrowPress(arrowKey: str, presses: int = 1) -> None:
