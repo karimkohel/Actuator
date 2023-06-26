@@ -61,6 +61,12 @@ class Actuator():
 
         return centers
 
+    def detectGridPosition(self,point:tuple,centers:list)-> tuple:
+        kdtree = KDTree(centers)
+        _, nearest_idx = kdtree.query(point)
+        nearest_point = centers[nearest_idx]
+        return nearest_point
+
     def pointToRegion(self, regionNum: int) -> None:
         """Method to drive the mouse to point to the center of a specified region on the screen
 
