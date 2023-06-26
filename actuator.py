@@ -4,9 +4,7 @@ from sys import platform
 import osascript
 #from pyvolume import pyvolume
 from subprocess import call
-
-
-
+from scipy.spatial import KDTree
 
 class Actuator():
     """Class containing all main methods of controlling a PC in the HTI context 
